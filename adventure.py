@@ -1,5 +1,5 @@
-import pandas as pd
 import re
+import pandas as pd
 
 def load_artifact_data(excel_filepath):
     """
@@ -92,7 +92,7 @@ if __name__ == '__main__':
         print(f"Found dates: {dates}")
 
         print("\nExtracting Secret Codes...")
-        codes = extract_secret_codes(journal_content)
+        extracted_codes = extract_secret_codes(journal_content)
         print(f"Found codes: {codes}")
 
     except FileNotFoundError:
