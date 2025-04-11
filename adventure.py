@@ -51,8 +51,8 @@ def extract_secret_codes(journal_text):
         list[str]: A list of secret code strings found in the text.
     """
     pattern = r"AZMAR-\d{3}"
-    codes = re.findall(pattern, journal_text)
-    return codes
+    extracted_codes = re.findall(pattern, journal_text)
+    return extracted_codes
 
 
 # --- Optional: Main execution block for your own testing ---
