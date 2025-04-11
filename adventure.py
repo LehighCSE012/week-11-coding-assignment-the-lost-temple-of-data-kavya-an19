@@ -51,8 +51,8 @@ def extract_secret_codes(journal_text):
         list[str]: A list of secret code strings found in the text.
     """
     pattern = r"AZMAR-\d{3}"
-    extracted_codes = re.findall(pattern, journal_text)
-    return extracted_codes
+    codes = re.findall(pattern, journal_text)
+    return codes
 
 
 # --- Optional: Main execution block for your own testing ---
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
         print("\nExtracting Secret Codes...")
         extracted_codes = extract_secret_codes(journal_content)
-        print(f"Found codes: {codes}")
+        print(f"Found codes: {extracted_codes}")
 
     except FileNotFoundError:
         print(f"Error: File not found at {JOURNAL_FILE}")
